@@ -1,13 +1,12 @@
 {
   "name": "sqlite3-storage",
   "version": "0.1.0",
-  "description": "",
+  "description": "A simple key-value store like localStorage using better-sqlite3",
   "keywords": [],
   "private": true,
   "main": "lib/sqlite3-storage",
   "module": "lib/sqlite3-storage.mjs",
   "types": "lib/sqlite3-storage.d.ts",
-  "unpkg": "umd/sqlite3-storage.js",
   "scripts": {
     "test": "jest",
     "doc": "typedoc --json ./docs/typedoc.json --tsconfig ./src/tsconfig.json ./src",
@@ -15,7 +14,6 @@
     "clean": "rimraf lib coverage umd {src,test}/**/*.{js,mjs,map,d.ts} *.tgz .rpt2_cache",
     "build:cjs": "rollup -c -f cjs -o ./lib/sqlite3-storage.js",
     "build:mjs": "rollup -c -f es -o ./lib/sqlite3-storage.mjs",
-    "build:umd": "rollup -c rollup.config.umd.js",
     "build:d_ts": "tsc -p src -d --emitDeclarationOnly --outDir ./lib",
     "postbuild:d_ts": "node -e \"require('rimraf').sync('lib/*.d.ts', { glob: { ignore: 'lib/sqlite3-storage.d.ts' } })\"",
     "tslint": "tslint --exclude **/*.d.ts src/**/*.{ts,tsx} test/**/*.ts",
@@ -28,6 +26,7 @@
   "homepage": "http://github.com/yagisumi/node-sqlite3-storage#readme",
   "license": "MIT",
   "devDependencies": {
+    "@types/better-sqlite3": "^5.4.0",
     "@types/jest": "^24.0.13",
     "@types/node": "^12.0.2",
     "coveralls": "^3.0.3",
@@ -46,5 +45,8 @@
     "tslint-plugin-prettier": "^2.0.1",
     "typedoc": "^0.14.2",
     "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "better-sqlite3": "^5.4.0"
   }
 }

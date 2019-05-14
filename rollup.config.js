@@ -8,7 +8,7 @@ export default {
     sourcemap: true,
     sourcemapExcludeSources: true,
   },
-  external: [],
+  external: ["better-sqlite3"],
 
   plugins: [
     typescript({

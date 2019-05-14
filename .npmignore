@@ -8,6 +8,6 @@ package-lock.json
 rollup.config.js
 rollup.config.umd.js
 *.tgz
-test/
-docs/
-coverage/
+/test/
+/docs/
+/coverage/
