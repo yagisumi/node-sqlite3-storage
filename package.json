@@ -1,8 +1,11 @@
 {
-  "name": "sqlite3-storage",
+  "name": "@yagisumi/sqlite3-storage",
   "version": "0.1.0",
   "description": "A simple key-value store like localStorage using better-sqlite3",
-  "keywords": [],
+  "keywords": [
+    "sqlite3",
+    "kvs"
+  ],
   "private": true,
   "main": "lib/sqlite3-storage",
   "module": "lib/sqlite3-storage.mjs",
@@ -26,7 +29,6 @@
   "homepage": "http://github.com/yagisumi/node-sqlite3-storage#readme",
   "license": "MIT",
   "devDependencies": {
-    "@types/better-sqlite3": "^5.4.0",
     "@types/jest": "^24.0.13",
     "@types/node": "^12.0.2",
     "coveralls": "^3.0.3",
@@ -47,6 +49,7 @@
     "typescript": "^3.4.5"
   },
   "dependencies": {
+    "@types/better-sqlite3": "^5.4.0",
     "better-sqlite3": "^5.4.0"
   }
 }
