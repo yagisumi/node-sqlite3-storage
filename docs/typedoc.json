@@ -1,0 +1,1456 @@
+{
+	"id": 0,
+	"name": "@yagisumi/sqlite3-storage",
+	"kind": 0,
+	"flags": {},
+	"children": [
+		{
+			"id": 20,
+			"name": "Sqlite3Storage",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 48,
+					"name": "DatabaseOptions",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 51,
+							"name": "fileMustExist",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "G:/data/workspace/script/node/sqlite3-storage/node_modules/@types/better-sqlite3/index.d.ts",
+									"line": 103,
+									"character": 21
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Options.fileMustExist"
+							}
+						},
+						{
+							"id": 49,
+							"name": "memory",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "G:/data/workspace/script/node/sqlite3-storage/node_modules/@types/better-sqlite3/index.d.ts",
+									"line": 101,
+									"character": 14
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Options.memory"
+							}
+						},
+						{
+							"id": 50,
+							"name": "readonly",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "G:/data/workspace/script/node/sqlite3-storage/node_modules/@types/better-sqlite3/index.d.ts",
+									"line": 102,
+									"character": 16
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Options.readonly"
+							}
+						},
+						{
+							"id": 52,
+							"name": "timeout",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "G:/data/workspace/script/node/sqlite3-storage/node_modules/@types/better-sqlite3/index.d.ts",
+									"line": 104,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Options.timeout"
+							}
+						},
+						{
+							"id": 53,
+							"name": "verbose",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "G:/data/workspace/script/node/sqlite3-storage/node_modules/@types/better-sqlite3/index.d.ts",
+									"line": 105,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "reflection",
+										"declaration": {
+											"id": 54,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {},
+											"signatures": [
+												{
+													"id": 55,
+													"name": "__call",
+													"kind": 4096,
+													"kindString": "Call signature",
+													"flags": {},
+													"parameters": [
+														{
+															"id": 56,
+															"name": "message",
+															"kind": 32768,
+															"kindString": "Parameter",
+															"flags": {
+																"isOptional": true
+															},
+															"type": {
+																"type": "intrinsic",
+																"name": "any"
+															}
+														},
+														{
+															"id": 57,
+															"name": "additionalArgs",
+															"kind": 32768,
+															"kindString": "Parameter",
+															"flags": {
+																"isRest": true
+															},
+															"type": {
+																"type": "array",
+																"elementType": {
+																	"type": "intrinsic",
+																	"name": "any"
+																}
+															}
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "void"
+													}
+												}
+											]
+										}
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Options.verbose"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								51,
+								49,
+								50,
+								52,
+								53
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "sqlite3-storage.ts",
+							"line": 49,
+							"character": 34
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "Options"
+						}
+					]
+				},
+				{
+					"id": 45,
+					"name": "KeyValue",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 46,
+							"name": "key",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 45,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 47,
+							"name": "value",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 46,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								46,
+								47
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "sqlite3-storage.ts",
+							"line": 44,
+							"character": 27
+						}
+					]
+				},
+				{
+					"id": 21,
+					"name": "Storage",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 22,
+							"name": "db",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "sqlite3-storage Database object"
+							},
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 6,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Database",
+								"id": 1
+							}
+						},
+						{
+							"id": 24,
+							"name": "length",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Return the number of items stored."
+							},
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 10,
+									"character": 19
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 23,
+							"name": "storageName",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Storage name. This name is used for the table name."
+							},
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 8,
+									"character": 24
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 43,
+							"name": "__@iterator",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 44,
+									"name": "__@iterator",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "StorageIterator",
+										"id": 61
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 41,
+									"character": 21
+								}
+							]
+						},
+						{
+							"id": 33,
+							"name": "at",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 34,
+									"name": "at",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Return the key and value corresponding to the index"
+									},
+									"parameters": [
+										{
+											"id": 35,
+											"name": "index",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "a zero-based index\n"
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"name": "KeyValue",
+												"id": 45
+											},
+											{
+												"type": "intrinsic",
+												"name": "null"
+											}
+										]
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 29,
+									"character": 6
+								}
+							]
+						},
+						{
+							"id": 25,
+							"name": "clear",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 26,
+									"name": "clear",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Clear items. All items will be deleted."
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 14,
+									"character": 9
+								}
+							]
+						},
+						{
+							"id": 27,
+							"name": "getItem",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 28,
+									"name": "getItem",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Get the item with the specified key. The order is ROWID of the table."
+									},
+									"parameters": [
+										{
+											"id": 29,
+											"name": "key",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "key name\n"
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "intrinsic",
+												"name": "null"
+											}
+										]
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 19,
+									"character": 11
+								}
+							]
+						},
+						{
+							"id": 30,
+							"name": "key",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 31,
+									"name": "key",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Return the key corresponding to the index"
+									},
+									"parameters": [
+										{
+											"id": 32,
+											"name": "index",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "a zero-based index\n"
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "intrinsic",
+												"name": "null"
+											}
+										]
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 24,
+									"character": 7
+								}
+							]
+						},
+						{
+							"id": 36,
+							"name": "removeItem",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 37,
+									"name": "removeItem",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Remove the item with the specified key."
+									},
+									"parameters": [
+										{
+											"id": 38,
+											"name": "key",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "key name\n"
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 34,
+									"character": 14
+								}
+							]
+						},
+						{
+							"id": 39,
+							"name": "setItem",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 40,
+									"name": "setItem",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Set item."
+									},
+									"parameters": [
+										{
+											"id": 41,
+											"name": "key",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										},
+										{
+											"id": 42,
+											"name": "value",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"comment": {
+												"text": "\n"
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 40,
+									"character": 11
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								22,
+								24,
+								23
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								43,
+								33,
+								25,
+								27,
+								30,
+								36,
+								39
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "sqlite3-storage.ts",
+							"line": 4,
+							"character": 26
+						}
+					]
+				},
+				{
+					"id": 61,
+					"name": "StorageIterator",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 62,
+							"name": "__@iterator",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 63,
+									"name": "__@iterator",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "StorageIterator",
+										"id": 61
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 61,
+									"character": 21
+								}
+							]
+						},
+						{
+							"id": 64,
+							"name": "next",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 65,
+									"name": "next",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IteratorResult",
+										"id": 68
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 62,
+									"character": 8
+								}
+							]
+						},
+						{
+							"id": 66,
+							"name": "return",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 67,
+									"name": "return",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "IteratorResult",
+										"id": 68
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 63,
+									"character": 10
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								62,
+								64,
+								66
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "sqlite3-storage.ts",
+							"line": 60,
+							"character": 34
+						}
+					]
+				},
+				{
+					"id": 58,
+					"name": "TransactionOptions",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 59,
+							"name": "rollback",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "Whether to roll back when an exception occurs. default is true"
+							},
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 53,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "false"
+									},
+									{
+										"type": "intrinsic",
+										"name": "true"
+									}
+								]
+							}
+						},
+						{
+							"id": 60,
+							"name": "type",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "transaction type. \"DEFERRED\", \"IMMEDIATE\" or \"EXCLUSIVE\""
+							},
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 55,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "TransactionType"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								59,
+								60
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "sqlite3-storage.ts",
+							"line": 51,
+							"character": 37
+						}
+					]
+				},
+				{
+					"id": 68,
+					"name": "IteratorResult",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "sqlite3-storage.ts",
+							"line": 58,
+							"character": 28
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 69,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "sqlite3-storage.ts",
+									"line": 58,
+									"character": 30
+								}
+							]
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						48,
+						45,
+						21,
+						61,
+						58
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						68
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "sqlite3-storage.ts",
+					"line": 3,
+					"character": 31
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "Database",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {
+				"isExported": true
+			},
+			"children": [
+				{
+					"id": 3,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {},
+					"signatures": [
+						{
+							"id": 4,
+							"name": "new Database",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 5,
+									"name": "path_or_sqlite3",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"shortText": "path or better-sqlite3 Database instance"
+									},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "reference",
+												"name": "Sqlite3.Database"
+											}
+										]
+									}
+								},
+								{
+									"id": 6,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"comment": {
+										"shortText": "better-sqlite3 Database option and table name used by sqlite3-storage\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "Sqlite3Storage.DatabaseOptions",
+										"id": 48
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Database",
+								"id": 1
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "sqlite3-storage.ts",
+							"line": 75,
+							"character": 69
+						}
+					]
+				},
+				{
+					"id": 2,
+					"name": "db",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isExported": true
+					},
+					"sources": [
+						{
+							"fileName": "sqlite3-storage.ts",
+							"line": 70,
+							"character": 13
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Sqlite3.Database"
+					}
+				},
+				{
+					"id": 7,
+					"name": "inTransaction",
+					"kind": 262144,
+					"kindString": "Accessor",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {
+						"shortText": "Return whether database is in transaction."
+					},
+					"getSignature": [
+						{
+							"id": 8,
+							"name": "__get",
+							"kind": 524288,
+							"kindString": "Get signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Return whether database is in transaction."
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "sqlite3-storage.ts",
+							"line": 104,
+							"character": 19
+						}
+					]
+				},
+				{
+					"id": 9,
+					"name": "close",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 10,
+							"name": "close",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Close database."
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "sqlite3-storage.ts",
+							"line": 111,
+							"character": 7
+						}
+					]
+				},
+				{
+					"id": 11,
+					"name": "getStorage",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 12,
+							"name": "getStorage",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Get storage."
+							},
+							"parameters": [
+								{
+									"id": 13,
+									"name": "name",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "Storage name\n"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Storage",
+								"id": 21
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "sqlite3-storage.ts",
+							"line": 119,
+							"character": 12
+						}
+					]
+				},
+				{
+					"id": 14,
+					"name": "transaction",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 15,
+							"name": "transaction",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Execute function in transaction."
+							},
+							"parameters": [
+								{
+									"id": 16,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "Transaction options about rollback and lock."
+									},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"name": "TransactionOptions",
+												"id": 58
+											},
+											{
+												"type": "intrinsic",
+												"name": "null"
+											},
+											{
+												"type": "intrinsic",
+												"name": "undefined"
+											}
+										]
+									}
+								},
+								{
+									"id": 17,
+									"name": "func",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "Function to be executed in a transaction.\n"
+									},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 18,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {},
+											"signatures": [
+												{
+													"id": 19,
+													"name": "__call",
+													"kind": 4096,
+													"kindString": "Call signature",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "void"
+													}
+												}
+											],
+											"sources": [
+												{
+													"fileName": "sqlite3-storage.ts",
+													"line": 132,
+													"character": 82
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "sqlite3-storage.ts",
+							"line": 132,
+							"character": 13
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"kind": 512,
+					"children": [
+						3
+					]
+				},
+				{
+					"title": "Properties",
+					"kind": 1024,
+					"children": [
+						2
+					]
+				},
+				{
+					"title": "Accessors",
+					"kind": 262144,
+					"children": [
+						7
+					]
+				},
+				{
+					"title": "Methods",
+					"kind": 2048,
+					"children": [
+						9,
+						11,
+						14
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "sqlite3-storage.ts",
+					"line": 69,
+					"character": 21
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 2,
+			"children": [
+				20
+			]
+		},
+		{
+			"title": "Classes",
+			"kind": 128,
+			"children": [
+				1
+			]
+		}
+	]
+}

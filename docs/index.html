@@ -1,0 +1,273 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@yagisumi/sqlite3-storage</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@yagisumi/sqlite3-storage</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> @yagisumi/sqlite3-storage</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 id="-yagisumi-sqlite3-storage">@yagisumi/sqlite3-storage</h1>
+				<p>A simple key-value store like localStorage using better-sqlite3.</p>
+				<p><a href="https://npmjs.org/package/@yagisumi/sqlite3-storage"><img src="https://img.shields.io/npm/v/@yagisumi/sqlite3-storage.svg?style=flat-square" alt="NPM version"></a> <a href="https://packagephobia.now.sh/result?p=@yagisumi/sqlite3-storage"><img src="https://flat.badgen.net/packagephobia/install/@yagisumi/sqlite3-storage" alt="install size"></a> <a href="http://definitelytyped.org"><img src="https://img.shields.io/badge/DefinitelyTyped-.d.ts-blue.svg?style=flat-square" alt="DefinitelyTyped"></a><br><a href="https://travis-ci.org/yagisumi/node-sqlite3-storage"><img src="https://img.shields.io/travis/yagisumi/node-sqlite3-storage.svg?style=flat-square" alt="Build Status"></a> <a href="https://coveralls.io/github/yagisumi/node-sqlite3-storage?branch=master"><img src="https://img.shields.io/coveralls/yagisumi/node-sqlite3-storage.svg?style=flat-square" alt="Coverage percentage"></a></p>
+				<h2 id="installation">Installation</h2>
+				<pre><code class="language-sh">$ npm i @yagisumi/sqlite3-storage</code></pre>
+				<h2 id="usage">Usage</h2>
+				<ul>
+					<li>javascript</li>
+				</ul>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> Database = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@yagisumi/sqlite3-storage'</span>).Database;
+
+<span class="hljs-keyword">const</span> db = <span class="hljs-keyword">new</span> Database(<span class="hljs-string">':memory:'</span>);
+<span class="hljs-keyword">const</span> storage = db.getStorage(<span class="hljs-string">'foo'</span>);
+storage.setItem(<span class="hljs-string">'key1'</span>, <span class="hljs-string">'value1'</span>);
+<span class="hljs-keyword">let</span> v = storage.getItem(<span class="hljs-string">'key1'</span>);
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> kv <span class="hljs-keyword">of</span> storage) {
+  <span class="hljs-built_in">console</span>.log(kv.key, kv.value);
+}
+
+storage.clear();</code></pre>
+				<ul>
+					<li>typescript</li>
+				</ul>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { Database } <span class="hljs-keyword">from</span> <span class="hljs-string">'@yagisumi/sqlite3-storage'</span>;
+
+<span class="hljs-comment">// ...</span></code></pre>
+				<h2 id="remarks">Remarks</h2>
+				<ul>
+					<li><p>Note that SQLite3 exceptions can be thrown from anywhere.</p>
+					</li>
+					<li><p>When setting many items, you should do in a transaction. Otherwise it takes a lot of time.</p>
+					</li>
+				</ul>
+				<pre><code class="language-js">db.transaction({ <span class="hljs-attr">rollback</span>: <span class="hljs-literal">false</span> }, () =&gt; {
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) {
+    storage.setItem(<span class="hljs-string">`key<span class="hljs-subst">${i}</span>`</span>, <span class="hljs-string">`value<span class="hljs-subst">${i}</span>`</span>)
+  }
+})</code></pre>
+				<h2 id="example">Example</h2>
+				<p>example with typescript</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { Database, Sqlite3Storage } <span class="hljs-keyword">from</span> <span class="hljs-string">"@yagisumi/sqlite3-storage"</span>
+<span class="hljs-keyword">import</span> serialijse <span class="hljs-keyword">from</span> <span class="hljs-string">"serialijse"</span>
+
+<span class="hljs-keyword">class</span> Store&lt;T&gt; {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> storage: Sqlite3Storage.Storage</span>) {}
+  <span class="hljs-keyword">set</span>(key: <span class="hljs-built_in">string</span>, obj: T) {
+    <span class="hljs-keyword">this</span>.storage.setItem(key, serialijse.serialize(obj))
+  }
+  <span class="hljs-keyword">get</span>(key: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">const</span> v = <span class="hljs-keyword">this</span>.storage.getItem(key)
+    <span class="hljs-keyword">if</span> (v) {
+      <span class="hljs-keyword">return</span> serialijse.deserialize&lt;T&gt;(v)
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>
+    }
+  }
+}
+
+<span class="hljs-keyword">class</span> Person {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">readonly name: <span class="hljs-built_in">string</span>, readonly age: <span class="hljs-built_in">number</span></span>) {}
+}
+serialijse.declarePersistable(Person)
+
+<span class="hljs-keyword">const</span> db = <span class="hljs-keyword">new</span> Database(<span class="hljs-string">"temp.db"</span>)
+<span class="hljs-keyword">const</span> storage = db.getStorage(<span class="hljs-string">"people"</span>)
+<span class="hljs-keyword">const</span> store = <span class="hljs-keyword">new</span> Store&lt;Person&gt;(storage)
+
+<span class="hljs-keyword">const</span> people = [<span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Mike"</span>, <span class="hljs-number">39</span>), <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Bob"</span>, <span class="hljs-number">44</span>)]
+
+db.transaction(<span class="hljs-literal">null</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> p of people) {
+    store.set(p.name, p)
+  }
+})
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> p of people) {
+  <span class="hljs-built_in">console</span>.log(store.get(p.name))
+}</code></pre>
+				<h2 id="reference">Reference</h2>
+				<pre><code class="language-ts"><span class="hljs-keyword">class</span> Database {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">path_or_sqlite3: <span class="hljs-built_in">string</span> | Sqlite3.Database, options?: Sqlite3Storage.DatabaseOptions</span>);
+  readonly inTransaction: boolean;
+  close(<span class="hljs-params"></span>): void;
+  getStorage(<span class="hljs-params">name: <span class="hljs-built_in">string</span></span>): Sqlite3Storage.Storage;
+  transaction(<span class="hljs-params">options: Sqlite3Storage.TransactionOptions | <span class="hljs-literal">null</span> | <span class="hljs-literal">undefined</span>, func: () =&gt; <span class="hljs-built_in">void</span></span>): void;
+}
+
+namespace Sqlite3Storage {
+  <span class="hljs-keyword">interface</span> Storage {
+    readonly db: Database;
+    readonly storageName: <span class="hljs-built_in">string</span>;
+    readonly length: <span class="hljs-built_in">number</span>;
+    clear(): <span class="hljs-built_in">void</span>;
+    getItem(key: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span>;
+    key(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span>;
+    at(index: <span class="hljs-built_in">number</span>): KeyValue | <span class="hljs-literal">null</span>;
+    removeItem(key: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">void</span>;
+    setItem(key: <span class="hljs-built_in">string</span>, value: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">void</span>;
+  }
+  <span class="hljs-keyword">interface</span> KeyValue {
+    key: <span class="hljs-built_in">string</span>;
+    value: <span class="hljs-built_in">string</span>;
+  }
+  <span class="hljs-keyword">interface</span> DatabaseOptions {
+    <span class="hljs-comment">// better-sqlite3 options</span>
+    memory?: <span class="hljs-built_in">boolean</span>;
+    readonly?: <span class="hljs-built_in">boolean</span>;
+    fileMustExist?: <span class="hljs-built_in">boolean</span>;
+    timeout?: <span class="hljs-built_in">number</span>;
+    verbose?: <span class="hljs-function">(<span class="hljs-params">message?: <span class="hljs-built_in">any</span>, ...additionalArgs: <span class="hljs-built_in">any</span>[]</span>) =&gt;</span> <span class="hljs-built_in">void</span>;
+  }
+  <span class="hljs-keyword">interface</span> TransactionOptions {
+    rollback?: <span class="hljs-built_in">boolean</span>; <span class="hljs-comment">// default: true</span>
+    <span class="hljs-keyword">type</span>?: TransactionType; <span class="hljs-comment">// "DEFERRED" | "IMMEDIATE" | "EXCLUSIVE"</span>
+  }
+}</code></pre>
+				<h2 id="documentation">Documentation</h2>
+				<p><a href="https://yagisumi.github.io/node-sqlite3-storage/">https://yagisumi.github.io/node-sqlite3-storage/</a></p>
+				<h2 id="license">License</h2>
+				<p><a href="https://opensource.org/licenses/MIT">MIT License</a></p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/sqlite3storage.html">Sqlite3<wbr>Storage</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/database.html" class="tsd-kind-icon">Database</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
