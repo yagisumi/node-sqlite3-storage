@@ -3,7 +3,7 @@
 A simple key-value store like localStorage using better-sqlite3.
 
 [![NPM version][npm-image]][npm-url] [![install size][packagephobia-image]][packagephobia-url] [![DefinitelyTyped][dts-image]][dts-url]  
-[![Build Status][travis-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+[![Build Status][travis-image]][appveyor-url] [![Build Status][appveyor-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
 ## Installation
 
@@ -153,6 +153,8 @@ https://yagisumi.github.io/node-sqlite3-storage/
 [packagephobia-url]: https://packagephobia.now.sh/result?p=@yagisumi/sqlite3-storage
 [travis-image]: https://img.shields.io/travis/yagisumi/node-sqlite3-storage.svg?style=flat-square
 [travis-url]: https://travis-ci.org/yagisumi/node-sqlite3-storage
+[appveyor-image]: https://img.shields.io/appveyor/ci/yagisumi/node-sqlite3-storage.svg?logo=appveyor&style=flat-square
+[appveyor-url]: https://ci.appveyor.com/project/yagisumi/node-sqlite3-storage
 [coveralls-image]: https://img.shields.io/coveralls/yagisumi/node-sqlite3-storage.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/github/yagisumi/node-sqlite3-storage?branch=master
 [dts-image]: https://img.shields.io/badge/DefinitelyTyped-.d.ts-blue.svg?style=flat-square
