@@ -2,6 +2,8 @@
 environment:
   matrix:
     # node.js
+    - nodejs_version: "6"
+    - nodejs_version: "8"
     - nodejs_version: "10"
 
 platform:
@@ -24,4 +26,5 @@ test_script:
   # run tests
   - npm test
 
+# No need to run `npm run build`
 build: off
