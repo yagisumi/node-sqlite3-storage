@@ -3,7 +3,7 @@
 A simple key-value store like localStorage using better-sqlite3.
 
 [![NPM version][npm-image]][npm-url] [![install size][packagephobia-image]][packagephobia-url] [![DefinitelyTyped][dts-image]][dts-url]  
-[![Build Status][travis-image]][appveyor-url] [![Build Status][appveyor-image]][travis-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+[![Build Status][travis-image]][travis-url] [![Build Status][appveyor-image]][appveyor-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
 ## Installation
 
