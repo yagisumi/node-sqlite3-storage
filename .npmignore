@@ -1,5 +1,4 @@
 .*
-appveyor.yml
 jest.config.js
 tslint.json
 typedoc.js
