@@ -62,7 +62,7 @@
 			<div class="tsd-panel tsd-typography">
 				<h1 id="-yagisumi-sqlite3-storage">@yagisumi/sqlite3-storage</h1>
 				<p>A simple key-value store like localStorage using better-sqlite3.</p>
-				<p><a href="https://npmjs.org/package/@yagisumi/sqlite3-storage"><img src="https://img.shields.io/npm/v/@yagisumi/sqlite3-storage.svg?style=flat-square" alt="NPM version"></a> <a href="https://packagephobia.now.sh/result?p=@yagisumi/sqlite3-storage"><img src="https://flat.badgen.net/packagephobia/install/@yagisumi/sqlite3-storage" alt="install size"></a> <a href="http://definitelytyped.org"><img src="https://img.shields.io/badge/DefinitelyTyped-.d.ts-blue.svg?style=flat-square" alt="DefinitelyTyped"></a><br><a href="https://travis-ci.org/yagisumi/node-sqlite3-storage"><img src="https://img.shields.io/travis/yagisumi/node-sqlite3-storage.svg?style=flat-square" alt="Build Status"></a> <a href="https://coveralls.io/github/yagisumi/node-sqlite3-storage?branch=master"><img src="https://img.shields.io/coveralls/yagisumi/node-sqlite3-storage.svg?style=flat-square" alt="Coverage percentage"></a></p>
+				<p><a href="https://npmjs.org/package/@yagisumi/sqlite3-storage"><img src="https://img.shields.io/npm/v/@yagisumi/sqlite3-storage.svg?style=flat-square" alt="NPM version"></a> <a href="https://packagephobia.now.sh/result?p=@yagisumi/sqlite3-storage"><img src="https://flat.badgen.net/packagephobia/install/@yagisumi/sqlite3-storage" alt="install size"></a> <a href="http://definitelytyped.org"><img src="https://img.shields.io/badge/DefinitelyTyped-.d.ts-blue.svg?style=flat-square" alt="DefinitelyTyped"></a><br><a href="https://travis-ci.org/yagisumi/node-sqlite3-storage"><img src="https://img.shields.io/travis/yagisumi/node-sqlite3-storage.svg?style=flat-square" alt="Build Status"></a> <a href="https://ci.appveyor.com/project/yagisumi/node-sqlite3-storage"><img src="https://img.shields.io/appveyor/ci/yagisumi/node-sqlite3-storage.svg?logo=appveyor&style=flat-square" alt="Build Status"></a> <a href="https://coveralls.io/github/yagisumi/node-sqlite3-storage?branch=master"><img src="https://img.shields.io/coveralls/yagisumi/node-sqlite3-storage.svg?style=flat-square" alt="Coverage percentage"></a></p>
 				<h2 id="installation">Installation</h2>
 				<pre><code class="language-sh">$ npm i @yagisumi/sqlite3-storage</code></pre>
 				<h2 id="usage">Usage</h2>
@@ -141,7 +141,7 @@ db.transaction(<span class="hljs-literal">null</span>, <span class="hljs-functio
 }</code></pre>
 				<h2 id="reference">Reference</h2>
 				<pre><code class="language-ts"><span class="hljs-keyword">class</span> Database {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">path_or_sqlite3: <span class="hljs-built_in">string</span> | Sqlite3.Database, options?: Sqlite3Storage.DatabaseOptions</span>);
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">path_or_sqlite3: <span class="hljs-built_in">string</span> | BetterSqlite3.Database, options?: Sqlite3Storage.DatabaseOptions</span>);
   readonly inTransaction: boolean;
   close(<span class="hljs-params"></span>): void;
   getStorage(<span class="hljs-params">name: <span class="hljs-built_in">string</span></span>): Sqlite3Storage.Storage;

@@ -101,7 +101,7 @@ for (let p of people) {
 
 ```ts
 class Database {
-  constructor(path_or_sqlite3: string | Sqlite3.Database, options?: Sqlite3Storage.DatabaseOptions);
+  constructor(path_or_sqlite3: string | BetterSqlite3.Database, options?: Sqlite3Storage.DatabaseOptions);
   readonly inTransaction: boolean;
   close(): void;
   getStorage(name: string): Sqlite3Storage.Storage;
