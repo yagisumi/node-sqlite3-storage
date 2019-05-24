@@ -12,7 +12,7 @@ export default {
 
   plugins: [
     typescript({
-      tsconfig: "./tsconfig.json",
+      tsconfig: "./src/tsconfig.json",
       tsconfigOverride: {
         compilerOptions: {
           module: "es2015",
