@@ -9,7 +9,6 @@
   "engines": {
     "node": ">= 8.0.0"
   },
-  "private": true,
   "main": "lib/sqlite3-storage",
   "module": "lib/sqlite3-storage.mjs",
   "types": "lib/sqlite3-storage.d.ts",
