@@ -2,6 +2,7 @@
 jest.config.js
 tslint.json
 typedoc.js
+typedoc.json
 yarn.lock
 yarn-error.log
 package-lock.json
@@ -11,3 +12,4 @@ rollup.config.umd.js
 /test/
 /docs/
 /coverage/
+/tsconfig.json
