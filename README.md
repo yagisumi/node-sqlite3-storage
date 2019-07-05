@@ -2,7 +2,7 @@
 
 A simple key-value store like localStorage using better-sqlite3.
 
-[![NPM version][npm-image]][npm-url] [![install size][packagephobia-image]][packagephobia-url] [![DefinitelyTyped][dts-image]][dts-url]  
+[![NPM version][npm-image]][npm-url] [![node version][node-image]][npm-url] [![DefinitelyTyped][dts-image]][dts-url]  
 [![Build Status][travis-image]][travis-url] [![Build Status][appveyor-image]][appveyor-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
 ## Installation
@@ -97,7 +97,7 @@ for (let p of people) {
 }
 ```
 
-## Reference
+## API Reference
 
 ```ts
 class Database {
@@ -149,9 +149,10 @@ https://yagisumi.github.io/node-sqlite3-storage/
 
 [npm-image]: https://img.shields.io/npm/v/@yagisumi/sqlite3-storage.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/@yagisumi/sqlite3-storage
+[node-image]: https://img.shields.io/node/v/@yagisumi/sqlite3-storage.svg
 [packagephobia-image]: https://flat.badgen.net/packagephobia/install/@yagisumi/sqlite3-storage
 [packagephobia-url]: https://packagephobia.now.sh/result?p=@yagisumi/sqlite3-storage
-[travis-image]: https://img.shields.io/travis/yagisumi/node-sqlite3-storage.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/yagisumi/node-sqlite3-storage.svg?logo=travis&style=flat-square
 [travis-url]: https://travis-ci.org/yagisumi/node-sqlite3-storage
 [appveyor-image]: https://img.shields.io/appveyor/ci/yagisumi/node-sqlite3-storage.svg?logo=appveyor&style=flat-square
 [appveyor-url]: https://ci.appveyor.com/project/yagisumi/node-sqlite3-storage
