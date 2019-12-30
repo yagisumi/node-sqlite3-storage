@@ -26,7 +26,7 @@
     "tslint:fix": "tslint --fix --exclude **/*.d.ts lib/**/*.{ts,tsx} test/**/*.ts",
     "prepack": "run-s build test"
   },
-  "author": "Yagi Sumiya",
+  "author": "yagisumi",
   "repository": "github:yagisumi/node-sqlite3-storage",
   "homepage": "http://github.com/yagisumi/node-sqlite3-storage#readme",
   "license": "MIT",
