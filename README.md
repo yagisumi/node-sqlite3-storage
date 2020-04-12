@@ -16,7 +16,7 @@ $ npm i @yagisumi/sqlite3-storage
 - javascript
 
 ```js
-const Database = require('@yagisumi/sqlite3-storage').Database;
+const { Database } = require('@yagisumi/sqlite3-storage');
 
 const db = new Database(':memory:');
 const storage = db.getStorage('foo');
